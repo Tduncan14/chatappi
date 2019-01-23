@@ -31,6 +31,11 @@ const chatkit = new Chatkit.default({
           res.status(error.status).json(error)
         }
      })
+ });
+
+ app.post('/authenticate',(req,res) =>{
+     const authData = chatkit.authenticate({userId: req.query.user_id})
+     res.status(authData.status).send(authData.body);
  })
 
 
