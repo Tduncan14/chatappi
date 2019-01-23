@@ -18,7 +18,7 @@ class SendMessageForm extends Component{
     }
    
     onChange(e){
-        this.setState({text:e.target.value})
+        this.setState({text: e.target.value})
         if(this.props.onChange){
             this.props.onChange()
         }
@@ -61,3 +61,5 @@ class SendMessageForm extends Component{
         )
     }
 }
+
+export default SendMessageForm;
