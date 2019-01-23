@@ -48,6 +48,15 @@ class SendMessageForm extends Component{
 
         return(
             <div style ={styles.container}>
+              <form onSubmit ={this.onSubmit} style ={styles.form}>
+             <input
+               type="text"
+               placeholder = "Message here, then enter"
+               onChange={this.onChange}
+               value ={this.state.text}
+               style ={styles.input} />
+              
+              </form>
             </div>
         )
     }
